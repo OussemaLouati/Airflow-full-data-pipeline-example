@@ -1,0 +1,35 @@
+[2022-05-08 10:23:12,630] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_cases_per_country_workflow4.data_check_sensor manual__2022-05-07T20:35:12.542674+00:00 [up_for_retry]>
+[2022-05-08 10:23:12,646] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: daily_cases_per_country_workflow4.data_check_sensor manual__2022-05-07T20:35:12.542674+00:00 [up_for_retry]>
+[2022-05-08 10:23:12,646] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-08 10:23:12,647] {taskinstance.py:1357} INFO - Starting attempt 2 of 4
+[2022-05-08 10:23:12,647] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-08 10:23:12,668] {taskinstance.py:1377} INFO - Executing <Task(CovidDailyDataSensor): data_check_sensor> on 2022-05-07 20:35:12.542674+00:00
+[2022-05-08 10:23:12,674] {standard_task_runner.py:52} INFO - Started process 227 to run task
+[2022-05-08 10:23:12,676] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'daily_cases_per_country_workflow4', 'data_check_sensor', 'manual__2022-05-07T20:35:12.542674+00:00', '--job-id', '3403', '--raw', '--subdir', 'DAGS_FOLDER/daily_covid_dag.py', '--cfg-path', '/tmp/tmpl2gnv8fp', '--error-file', '/tmp/tmpb0uugffu']
+[2022-05-08 10:23:12,677] {standard_task_runner.py:80} INFO - Job 3403: Subtask data_check_sensor
+[2022-05-08 10:23:12,736] {task_command.py:369} INFO - Running <TaskInstance: daily_cases_per_country_workflow4.data_check_sensor manual__2022-05-07T20:35:12.542674+00:00 [running]> on host 29423e45abf8
+[2022-05-08 10:23:12,830] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=oussama.louati4@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_cases_per_country_workflow4
+AIRFLOW_CTX_TASK_ID=data_check_sensor
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-07T20:35:12.542674+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-07T20:35:12.542674+00:00
+[2022-05-08 10:23:13,878] {logging_mixin.py:115} INFO - Checking available data of date: 07-05-2022 
+[2022-05-08 11:00:45,472] {local_task_job.py:221} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2022-05-08 11:00:45,474] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 227. PIDs of all processes in the group: [227]
+[2022-05-08 11:00:45,474] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 227
+[2022-05-08 11:00:45,474] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-05-08 11:00:45,488] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 299, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, try_number))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1543, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-05-08 11:00:45,493] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=daily_cases_per_country_workflow4, task_id=data_check_sensor, execution_date=20220507T203512, start_date=20220508T102312, end_date=20220508T110045
+[2022-05-08 11:00:45,505] {standard_task_runner.py:97} ERROR - Failed to execute job 3403 for task data_check_sensor (Task received SIGTERM signal; 227)
+[2022-05-08 11:00:45,526] {process_utils.py:75} INFO - Process psutil.Process(pid=227, status='terminated', exitcode=1, started='10:23:11') (227) terminated with exit code 1
