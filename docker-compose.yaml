@@ -24,8 +24,8 @@ x-airflow-common:
     AIRFLOW__METRICS__STATSD_PORT: 9125
     AIRFLOW__METRICS__STATSD_PREFIX: airflow
     AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
-    AIRFLOW__SMTP__SMTP_USER: apptest.airflow@gmail.com
-    AIRFLOW__SMTP__SMTP_PASSWORD: durhbcvjylodttgh
+    AIRFLOW__SMTP__SMTP_USER: ************* # TODO : Update this
+    AIRFLOW__SMTP__SMTP_PASSWORD: ************* # TODO: Update this
     AIRFLOW__SMTP__SMTP_PORT: 587
     AIRFLOW__SMTP__SMTP_MAIL_FROM: Airflow
     
