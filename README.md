@@ -71,7 +71,7 @@ The local development setup is based on a docker-compose configuration containin
    ```bash
     AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
     AIRFLOW__SMTP__SMTP_USER: ***********
-    AIRFLOW__SMTP__SMTP_PASSWORD: durhbcvjylodttgh
+    AIRFLOW__SMTP__SMTP_PASSWORD: *********
     AIRFLOW__SMTP__SMTP_PORT: 587
     AIRFLOW__SMTP__SMTP_MAIL_FROM: Airflow
    ```
