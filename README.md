@@ -1,4 +1,4 @@
-#  DATA OPS Airflow Assignement Documentation
+#  DATA OPS Airflow POC Documentation
 
 A POC to test Airflow setup, capabilities and monitoring.
 
